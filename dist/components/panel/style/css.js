@@ -1,1 +1,3 @@
-import './panel.css'
+"use strict";
+
+require("./panel.css");

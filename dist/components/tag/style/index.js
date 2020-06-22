@@ -1,1 +1,3 @@
-import './tag.less'
+"use strict";
+
+require("./tag.less");

@@ -1,1 +1,3 @@
-import './drawer.css'
+"use strict";
+
+require("./drawer.css");

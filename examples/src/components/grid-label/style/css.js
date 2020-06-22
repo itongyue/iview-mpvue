@@ -1,1 +1,3 @@
-import './grid-label.css'
+"use strict";
+
+require("./grid-label.css");

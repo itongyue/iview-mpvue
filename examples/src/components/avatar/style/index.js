@@ -1,1 +1,3 @@
-import './avatar.less'
+"use strict";
+
+require("./avatar.less");

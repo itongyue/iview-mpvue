@@ -1,3 +1,13 @@
-import noticeBar from './notice-bar.vue'
+"use strict";
 
-export default noticeBar
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _noticeBar = _interopRequireDefault(require("./notice-bar.vue"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var _default = _noticeBar["default"];
+exports["default"] = _default;

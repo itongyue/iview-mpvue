@@ -1,1 +1,3 @@
-import './drawer.less'
+"use strict";
+
+require("./drawer.less");

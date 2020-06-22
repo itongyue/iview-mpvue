@@ -1,1 +1,3 @@
-import './badge.less'
+"use strict";
+
+require("./badge.less");

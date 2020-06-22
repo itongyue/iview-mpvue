@@ -1,1 +1,3 @@
-import './collapse-item.less'
+"use strict";
+
+require("./collapse-item.less");

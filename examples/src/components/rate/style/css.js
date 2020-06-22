@@ -1,1 +1,3 @@
-import './rate.css'
+"use strict";
+
+require("./rate.css");

@@ -1,1 +1,3 @@
-import './modal.css'
+"use strict";
+
+require("./modal.css");

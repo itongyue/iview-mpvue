@@ -1,1 +1,3 @@
-import './swipeout.css'
+"use strict";
+
+require("./swipeout.css");

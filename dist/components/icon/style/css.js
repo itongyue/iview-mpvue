@@ -1,1 +1,3 @@
-import './icon.css'
+"use strict";
+
+require("./icon.css");

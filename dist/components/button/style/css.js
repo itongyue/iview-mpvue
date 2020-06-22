@@ -1,1 +1,3 @@
-import './button.css'
+"use strict";
+
+require("./button.css");

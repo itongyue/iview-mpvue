@@ -1,1 +1,3 @@
-import './cell.css'
+"use strict";
+
+require("./cell.css");

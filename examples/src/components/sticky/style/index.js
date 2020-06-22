@@ -1,1 +1,3 @@
-import './sticky.less'
+"use strict";
+
+require("./sticky.less");

@@ -1,1 +1,3 @@
-import './switch.css'
+"use strict";
+
+require("./switch.css");

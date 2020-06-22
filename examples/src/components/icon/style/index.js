@@ -1,1 +1,3 @@
-import './icon.less'
+"use strict";
+
+require("./icon.less");

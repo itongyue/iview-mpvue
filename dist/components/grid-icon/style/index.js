@@ -1,1 +1,3 @@
-import './grid-icon.less'
+"use strict";
+
+require("./grid-icon.less");

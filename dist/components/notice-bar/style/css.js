@@ -1,1 +1,3 @@
-import './notice-bar.css'
+"use strict";
+
+require("./notice-bar.css");

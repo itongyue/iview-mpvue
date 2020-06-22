@@ -1,1 +1,3 @@
-import './index-list.css'
+"use strict";
+
+require("./index-list.css");

@@ -1,1 +1,3 @@
-import './progress.less'
+"use strict";
+
+require("./progress.less");

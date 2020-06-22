@@ -1,1 +1,3 @@
-import './avatar.css'
+"use strict";
+
+require("./avatar.css");

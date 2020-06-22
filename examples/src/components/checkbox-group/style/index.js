@@ -1,1 +1,3 @@
-import './checkbox-group.less'
+"use strict";
+
+require("./checkbox-group.less");

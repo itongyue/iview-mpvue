@@ -1,3 +1,13 @@
-import drawer from './drawer.vue'
+"use strict";
 
-export default drawer
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _drawer = _interopRequireDefault(require("./drawer.vue"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var _default = _drawer["default"];
+exports["default"] = _default;

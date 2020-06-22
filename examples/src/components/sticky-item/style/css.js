@@ -1,1 +1,3 @@
-import './sticky-item.css'
+"use strict";
+
+require("./sticky-item.css");

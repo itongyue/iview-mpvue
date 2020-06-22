@@ -1,1 +1,3 @@
-import './message.css'
+"use strict";
+
+require("./message.css");

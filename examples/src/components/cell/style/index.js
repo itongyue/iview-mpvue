@@ -1,1 +1,3 @@
-import './cell.less'
+"use strict";
+
+require("./cell.less");

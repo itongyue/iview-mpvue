@@ -1,1 +1,3 @@
-import './countDown.less'
+"use strict";
+
+require("./countDown.less");

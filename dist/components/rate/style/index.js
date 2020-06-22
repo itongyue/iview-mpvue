@@ -1,1 +1,3 @@
-import './rate.less'
+"use strict";
+
+require("./rate.less");

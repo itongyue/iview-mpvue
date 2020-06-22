@@ -1,1 +1,3 @@
-import './grid-icon.css'
+"use strict";
+
+require("./grid-icon.css");

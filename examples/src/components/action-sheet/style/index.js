@@ -1,1 +1,3 @@
-import './action-sheet.less'
+"use strict";
+
+require("./action-sheet.less");

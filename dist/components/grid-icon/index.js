@@ -1,3 +1,13 @@
-import gridIcon from './grid-icon.vue'
+"use strict";
 
-export default gridIcon
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _gridIcon = _interopRequireDefault(require("./grid-icon.vue"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var _default = _gridIcon["default"];
+exports["default"] = _default;

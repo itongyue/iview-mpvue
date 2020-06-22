@@ -1,3 +1,13 @@
-import input from './input.vue'
+"use strict";
 
-export default input
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _input = _interopRequireDefault(require("./input.vue"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var _default = _input["default"];
+exports["default"] = _default;

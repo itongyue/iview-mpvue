@@ -1,1 +1,3 @@
-import './col.less'
+"use strict";
+
+require("./col.less");

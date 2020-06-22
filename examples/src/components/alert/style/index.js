@@ -1,1 +1,3 @@
-import './alert.less'
+"use strict";
+
+require("./alert.less");

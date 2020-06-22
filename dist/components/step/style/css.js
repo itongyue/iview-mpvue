@@ -1,1 +1,3 @@
-import './step.css'
+"use strict";
+
+require("./step.css");

@@ -1,1 +1,3 @@
-import './page.css'
+"use strict";
+
+require("./page.css");

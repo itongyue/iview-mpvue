@@ -1,1 +1,3 @@
-import './grid-item.less'
+"use strict";
+
+require("./grid-item.less");

@@ -1,1 +1,3 @@
-import './page.less'
+"use strict";
+
+require("./page.less");

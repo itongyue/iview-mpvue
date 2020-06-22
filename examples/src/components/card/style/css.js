@@ -1,1 +1,3 @@
-import './card.css'
+"use strict";
+
+require("./card.css");

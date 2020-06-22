@@ -1,1 +1,3 @@
-import './input.less'
+"use strict";
+
+require("./input.less");

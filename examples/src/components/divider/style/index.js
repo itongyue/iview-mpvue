@@ -1,1 +1,3 @@
-import './divider.less'
+"use strict";
+
+require("./divider.less");

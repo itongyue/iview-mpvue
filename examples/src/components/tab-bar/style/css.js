@@ -1,1 +1,3 @@
-import './tab-bar.css'
+"use strict";
+
+require("./tab-bar.css");

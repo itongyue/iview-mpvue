@@ -1,1 +1,3 @@
-import './radio-group.less'
+"use strict";
+
+require("./radio-group.less");

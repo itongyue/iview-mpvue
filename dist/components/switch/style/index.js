@@ -1,1 +1,3 @@
-import './switch.less'
+"use strict";
+
+require("./switch.less");

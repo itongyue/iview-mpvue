@@ -1,1 +1,3 @@
-import './toast.css'
+"use strict";
+
+require("./toast.css");

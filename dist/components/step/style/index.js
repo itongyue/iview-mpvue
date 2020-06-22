@@ -1,1 +1,3 @@
-import './step.less'
+"use strict";
+
+require("./step.less");

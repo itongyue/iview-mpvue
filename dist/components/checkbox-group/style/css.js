@@ -1,1 +1,3 @@
-import './checkbox-group.css'
+"use strict";
+
+require("./checkbox-group.css");

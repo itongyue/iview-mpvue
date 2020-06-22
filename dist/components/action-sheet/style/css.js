@@ -1,1 +1,3 @@
-import './action-sheet.css'
+"use strict";
+
+require("./action-sheet.css");

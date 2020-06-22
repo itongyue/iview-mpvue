@@ -1,1 +1,3 @@
-import './load-more.css'
+"use strict";
+
+require("./load-more.css");

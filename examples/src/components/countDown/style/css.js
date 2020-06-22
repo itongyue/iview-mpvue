@@ -1,1 +1,3 @@
-import './countDown.css'
+"use strict";
+
+require("./countDown.css");

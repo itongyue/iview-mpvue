@@ -1,1 +1,3 @@
-import './badge.css'
+"use strict";
+
+require("./badge.css");

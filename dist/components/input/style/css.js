@@ -1,1 +1,3 @@
-import './input.css'
+"use strict";
+
+require("./input.css");

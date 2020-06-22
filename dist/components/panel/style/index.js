@@ -1,1 +1,3 @@
-import './panel.less'
+"use strict";
+
+require("./panel.less");

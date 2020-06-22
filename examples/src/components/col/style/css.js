@@ -1,1 +1,3 @@
-import './col.css'
+"use strict";
+
+require("./col.css");

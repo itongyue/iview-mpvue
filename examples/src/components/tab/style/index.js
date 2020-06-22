@@ -1,1 +1,3 @@
-import './tab.less'
+"use strict";
+
+require("./tab.less");

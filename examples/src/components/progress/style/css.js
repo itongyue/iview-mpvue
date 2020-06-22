@@ -1,1 +1,3 @@
-import './progress.css'
+"use strict";
+
+require("./progress.css");

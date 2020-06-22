@@ -1,1 +1,3 @@
-import './button.less'
+"use strict";
+
+require("./button.less");

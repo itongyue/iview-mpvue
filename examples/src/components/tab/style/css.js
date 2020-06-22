@@ -1,1 +1,3 @@
-import './tab.css'
+"use strict";
+
+require("./tab.css");

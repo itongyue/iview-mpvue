@@ -1,1 +1,3 @@
-import './radio-group.css'
+"use strict";
+
+require("./radio-group.css");

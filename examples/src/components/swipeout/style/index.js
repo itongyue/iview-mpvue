@@ -1,1 +1,3 @@
-import './swipeout.less'
+"use strict";
+
+require("./swipeout.less");

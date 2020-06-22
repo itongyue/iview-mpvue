@@ -1,1 +1,3 @@
-import './alert.css'
+"use strict";
+
+require("./alert.css");

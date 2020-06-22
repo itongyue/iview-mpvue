@@ -1,1 +1,3 @@
-import './modal.less'
+"use strict";
+
+require("./modal.less");

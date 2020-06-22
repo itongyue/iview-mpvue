@@ -1,1 +1,3 @@
-import './collapse-item.css'
+"use strict";
+
+require("./collapse-item.css");

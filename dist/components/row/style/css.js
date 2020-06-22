@@ -1,1 +1,3 @@
-import './row.css'
+"use strict";
+
+require("./row.css");

@@ -1,1 +1,3 @@
-import './divider.css'
+"use strict";
+
+require("./divider.css");

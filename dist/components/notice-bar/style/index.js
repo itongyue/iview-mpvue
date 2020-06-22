@@ -1,1 +1,3 @@
-import './notice-bar.less'
+"use strict";
+
+require("./notice-bar.less");

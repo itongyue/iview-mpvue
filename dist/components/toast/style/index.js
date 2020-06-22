@@ -1,1 +1,3 @@
-import './toast.less'
+"use strict";
+
+require("./toast.less");

@@ -1,1 +1,3 @@
-import './tag.css'
+"use strict";
+
+require("./tag.css");

@@ -1,1 +1,3 @@
-import './spin.less'
+"use strict";
+
+require("./spin.less");

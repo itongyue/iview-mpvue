@@ -1,1 +1,3 @@
-import './spin.css'
+"use strict";
+
+require("./spin.css");

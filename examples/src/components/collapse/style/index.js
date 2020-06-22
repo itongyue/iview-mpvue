@@ -1,1 +1,3 @@
-import './collapse.less'
+"use strict";
+
+require("./collapse.less");

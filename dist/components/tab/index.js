@@ -1,3 +1,13 @@
-import tab from './tab.vue'
+"use strict";
 
-export default tab
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _tab = _interopRequireDefault(require("./tab.vue"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var _default = _tab["default"];
+exports["default"] = _default;

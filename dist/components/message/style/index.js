@@ -1,1 +1,3 @@
-import './message.less'
+"use strict";
+
+require("./message.less");

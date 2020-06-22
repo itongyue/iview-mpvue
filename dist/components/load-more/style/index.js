@@ -1,1 +1,3 @@
-import './load-more.less'
+"use strict";
+
+require("./load-more.less");

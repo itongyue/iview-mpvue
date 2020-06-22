@@ -1,1 +1,3 @@
-import './card.less'
+"use strict";
+
+require("./card.less");

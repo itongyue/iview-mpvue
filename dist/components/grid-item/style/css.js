@@ -1,1 +1,3 @@
-import './grid-item.css'
+"use strict";
+
+require("./grid-item.css");

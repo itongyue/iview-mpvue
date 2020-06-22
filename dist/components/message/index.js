@@ -1,3 +1,13 @@
-import message from './message.vue'
+"use strict";
 
-export default message
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _message = _interopRequireDefault(require("./message.vue"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var _default = _message["default"];
+exports["default"] = _default;
