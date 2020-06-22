@@ -74,4 +74,4 @@ gulp.task("compile", done => {
   compile().on("finish", done);
 });
 
-gulp.task('default', ['compile'])
+gulp.task('default', gulp.series('compile'))

@@ -83,10 +83,10 @@ gulp.task('copy-vue', () => {
 })
 
 gulp.task('auto', () => {
-  gulp.watch('../src/**/*.js', ['compile-js'])
-  gulp.watch('../assets/**/*.@(png|svg|jpg)', ['copy-static'])
-  gulp.watch('../src/components/**/*.vue', ['copy-vue'])
-  gulp.watch('../src/**/*.less', ['compile-css'])
+  gulp.watch('../src/**/*.js', gulp.series('compile-js'))
+  gulp.watch('../assets/**/*.@(png|svg|jpg)', gulp.series('copy-static'))
+  gulp.watch('../src/components/**/*.vue', gulp.series('copy-vue'))
+  gulp.watch('../src/**/*.less', gulp.series('compile-css'))
 })
 
-gulp.task('default', ['compile-css', 'compile-js', 'copy-vue','copy-static', 'auto'])
+gulp.task('default', gulp.series('compile-css', 'compile-js', 'copy-vue','copy-static', 'auto'))
