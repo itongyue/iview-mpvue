@@ -22,3 +22,8 @@ test/unit/coverage
 examples/project.config.json
 .vscode
 .package-lock.json
+dist/
+examples/src/assets/
+examples/src/components/
+examples/src/index.js
+examples/src/style.*
