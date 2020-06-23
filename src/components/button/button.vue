@@ -1,6 +1,7 @@
 <template>
   <button
     class="i-btn"
+    v-bind:hover-class="IBtnHover"
     v-bind:class="classObject"
     @click="handleTap"
     v-bind:open-type="openType"
@@ -58,6 +59,10 @@ export default {
     openType: String,
     appParameter: String,
     hoverStopPropagation: Boolean,
+    IBtnHover: {
+      type: String,
+      default: 'i-btn-hover'
+    },
     hoverStartTime: {
       type: Number,
       default: 20
