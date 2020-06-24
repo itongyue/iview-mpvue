@@ -3,7 +3,7 @@
     <scroll-view v-if="scroll" scroll-x=true class="i-tabs i-tabs-scroll" v-bind:class="classObj">
       <slot></slot>
     </scroll-view>
-    <div class="i-tabs" v-bind:class="noScrollClassObj" v-else><slot></slot></div>
+    <div class="i-tabs" v-bind:class="noScrollClass" v-else><slot></slot></div>
   </div>
 </template>
 

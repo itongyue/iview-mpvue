@@ -9,7 +9,7 @@
           :type="current ? currentIcon : icon"
           size="22"
         ></i-icon>
-        <image class="i-tab-bar-item-img" :src="current ? currentImg : img" v-else></image>
+        <img class="i-tab-bar-item-img" :src="current ? currentImg : img" v-else></img>
         <div class="i-tab-bar-item-title"
           v-bind:class="{'i-tab-bar-item-title-current': current}"
           v-if="current && currentColor"

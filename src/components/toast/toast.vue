@@ -12,7 +12,7 @@
       </div>
       <div v-else>
         <i-icon i-class="i-toast-icon" :type="icon" v-if="icon"></i-icon>
-        <image class="i-toast-image" :src="image" v-if="image" mode="aspectFit"></image>
+        <img class="i-toast-image" :src="image" v-if="image" mode="aspectFit"></img>
       </div>
       <div class="i-toast-content" v-if="content">{{ content }}</div>
     </div>
@@ -44,9 +44,9 @@ export default {
   },
   methods: {
     handleShow(options) {
-      const { 
+      const {
         type = 'default'
-        , duration = 2 
+        , duration = 2
         , icon = ''
         , image = ''
         , mask = true

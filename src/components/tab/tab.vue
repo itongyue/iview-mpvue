@@ -3,9 +3,9 @@
     <div class="i-tabs-tab-content">
       <i-badge :dot="dot" :count="remindCount">
         <div @click.stop="handleClickItem">
-          <div class="i-tabs-tab-title" 
-            v-bind:class="{'i-tabs-tab-title-current': current}" 
-            v-if="current && currentCount"
+          <div class="i-tabs-tab-title"
+            v-bind:class="{'i-tabs-tab-title-current': current}"
+            v-if="current"
             v-bind:style="{color: currentColor}">{{ title }}</div>
           <div class="i-tabs-tab-title"
             v-bind:class="{'i-tabs-tab-title-current': current}"

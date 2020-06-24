@@ -10,12 +10,12 @@
 export default {
   props: {
     span:{
-      type: Number,
-      default: 0
+      type: String,
+      default: '0'
     },
     offset: {
-      type: Number,
-      default: 0
+      type: String,
+      default: '0'
     },
     iClass: {
       type: String,

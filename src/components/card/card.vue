@@ -2,7 +2,7 @@
   <div class="i-card" v-bind:class="classObj">
     <section class="i-card-header" v-bind:class="iClass">
       <div class="i-card-header-content">
-        <image class="i-card-header-thumb" :src="thumb" v-if="thumb"></image>
+        <img class="i-card-header-thumb" :src="thumb" v-if="thumb"></img>
         {{ title }}
       </div>
       <div class="i-card-header-extra" v-if="extra">{{ extra }}</div>
