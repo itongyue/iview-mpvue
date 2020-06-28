@@ -79,7 +79,7 @@ export default {
     },
     maxlength: {
       type: Number,
-      default: 0
+      default: 50
     },
     iClass: {
       type: String,
