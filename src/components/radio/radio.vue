@@ -2,7 +2,7 @@
   <div class="i-radio" :class="iClass" @click="radioChange">
     <i-cell i-class="i-radio-cell">
       <label>
-        <radio :value="value" :checked="checked" :color="checked ? this.color : ''" :disabled="disabled" class="i-radio-radio" :class="positionCls"></radio>
+        <input type="radio" :name="name" :value="value" :checked="checked" :color="checked ? this.color : ''" :disabled="disabled" class="i-radio-radio" :class="positionCls"/>
         <div class="i-radio-title">{{ value }}</div>
       </label>
     </i-cell>
@@ -16,6 +16,10 @@ export default {
     'i-cell': cell
   },
   props: {
+    name: {
+      type: String,
+      default: ''
+    },
     value: {
       type: String,
       default: ''

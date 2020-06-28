@@ -1,7 +1,7 @@
 <template>
   <div>
     <i-panel title="group-水果">
-      <i-radio-group @groupChange="handleFruitChange" :current="current" :groups="fruit" :position="position"></i-radio-group>
+      <i-radio-group @change="handleFruitChange" :isMp="isMp" :current="current" :groups="fruit" :position="position"></i-radio-group>
     </i-panel>
     <i-button @click="handleClick" type="ghost">切换单选框位置</i-button>
   </div>
@@ -18,17 +18,22 @@ export default {
   },
   data() {
     return {
+      isMp: typeof(wx) != 'undefined',
       fruit: [{
         id: 1,
+        name: 'radio1',
         value: '香蕉'
       }, {
         id: 2,
+        name: 'radio1',
         value: '苹果'
       }, {
         id: 3,
+        name: 'radio1',
         value: '西瓜'
       }, {
         id: 4,
+        name: 'radio1',
         value: '葡萄'
       }],
       current: '苹果',

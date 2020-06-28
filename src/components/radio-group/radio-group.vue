@@ -1,16 +1,26 @@
 <template>
-  <div>
-    <radio-group class="i-cell-group" :i-class="iClass" @change="radioChange">
-      <label class="i-radio i-cell i-radio-cell" v-for="(item, index) in lists" :key="index">
-        <radio
-          :value="item.value"
-          :checked="item.checked"
-          :color="color" :disabled="item.disabled"
-          class="i-radio-radio" 
-          :class="[positionCls, iItemClass]"></radio>
-        <div class="i-radio-title">{{ item.value }}</div>
-      </label>
-    </radio-group>
+  <radio-group v-if="isMp" class="i-cell-group" :i-class="iClass" @change="radioChange">
+    <label class="i-radio i-cell i-radio-cell" v-for="(item, index) in lists" :key="index">
+      <input type="radio"
+        :value="item.value"
+        :checked="item.checked"
+        :color="color" :disabled="item.disabled"
+        class="i-radio-radio"
+        :class="[positionCls, iItemClass]"/>
+      <div class="i-radio-title">{{ item.value }}</div>
+    </label>
+  </radio-group>
+  <div v-else class="i-cell-group" :class="iClass" @change="radioChange">
+    <label class="i-radio i-cell i-radio-cell" v-for="(item, index) in lists" :key="index">
+      <input type="radio"
+             :name="item.name"
+             :value="item.value"
+             :checked="item.checked"
+             :color="color" :disabled="item.disabled"
+             class="i-radio-radio"
+             :class="[positionCls, iItemClass]"/>
+      <div class="i-radio-title">{{ item.value }}</div>
+    </label>
   </div>
 </template>
 <script>
@@ -23,6 +33,10 @@ export default {
     'i-cell': cell
   },
   props: {
+    isMp: {
+      type: Boolean,
+      default: true
+    },
     iClass: {
       type: String,
       default: ''
@@ -42,10 +56,6 @@ export default {
     color: {
       type: String,
       default: '#2d8cf0'
-    },
-    iClass: {
-      type: String,
-      default: ''
     },
     iItemClass: {
       type: String,
@@ -82,7 +92,7 @@ export default {
       this.positionCls = this.position === 'left' ? `${prefixCls}-radio-left` : `${prefixCls}-radio-right`
     },
     radioChange(evt) {
-      this.$emit('change', {value: evt.mp.detail.value})
+      this.$emit('change', {value: evt.mp != null ? evt.mp.detail.value : evt.target.value})
     }
   }
 }
