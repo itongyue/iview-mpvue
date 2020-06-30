@@ -81,7 +81,14 @@ export default {
         console.warn('linkType 属性可选值为 navigateTo，redirectTo，switchTab，reLaunch', this.linkType)
         return
       }
-      mpvue[this.linkType].call(mpvue, { url })
+      if (typeof(wx) != 'undefined') {
+        mpvue[this.linkType].call(mpvue, {url})
+      }
+      else {
+        let _url_ary = url.split('/')
+        _url_ary = _url_ary.slice(2, _url_ary.length - 1)
+        window.location.href = _url_ary.join('/') + '.html'
+      }
     },
     handleTap() {
       if (!this.onlyTapFooter) {
