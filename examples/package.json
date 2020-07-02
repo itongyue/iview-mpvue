@@ -23,7 +23,7 @@
     "build": "node build/build.js wx"
   },
   "dependencies": {
-    "mpvue": "^2.0.0"
+    "mpvue": "^1.4.6"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
@@ -60,8 +60,8 @@
     "url-loader": "^1.0.1",
     "vue-style-loader": "^4.1.0",
     "mkdirp": "^0.5.1",
-    "mpvue-loader": "^2.0.0",
-    "mpvue-template-compiler": "^2.0.0",
+    "mpvue-loader": "^1.4.0",
+    "mpvue-template-compiler": "^1.4.6",
     "mpvue-webpack-target": "^1.0.3",
     "webpack-mpvue-vendor-plugin": "^2.0.0",
     "webpack-mpvue-asset-plugin": "^2.0.0",
