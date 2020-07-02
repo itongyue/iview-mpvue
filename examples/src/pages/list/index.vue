@@ -34,14 +34,18 @@
         <block wx:if="switch1">
           <i-cell title="单行列表" label="附加描述" value="详细信息"></i-cell>
           <i-cell title="表单">
-            <div><input slot="footer" type="digit" placeholder="带小数点的数字键盘"></div>
+            <div slot="footer">
+              <input type="digit" placeholder="带小数点的数字键盘">
+            </div>
           </i-cell>
         </block>
         <i-cell title="开关">
-          <i-switch value="switch1" @change="onChange" slot="footer">
-            <i-icon type="right" slot="open"></i-icon>
-            <i-icon type="close" slot="close"></i-icon>
-          </i-switch>
+          <div slot="footer">
+            <i-switch :value="switch1" @change="onChange">
+              <i-icon type="right" slot="open"></i-icon>
+              <i-icon type="close" slot="close"></i-icon>
+            </i-switch>
+          </div>
         </i-cell>
       </i-cell-group>
     </i-panel>
