@@ -30,8 +30,8 @@
       <i-cell-group>
         <i-cell title="只显示箭头" is-link="true"></i-cell>
         <i-cell title="跳转到首页" is-link="true" url="/pages/index/main"></i-cell>
-        <i-cell title="只有 footer 点击有效" is-link="true" url="/pages/index/main" only-tap-footer="true"></i-cell>
-        <block wx:if="switch1">
+        <i-cell title="只有 footer 点击有效" is-link="true" url="/pages/index/main" :only-tap-footer="switch1"></i-cell>
+        <block v-if="switch1">
           <i-cell title="单行列表" label="附加描述" value="详细信息"></i-cell>
           <i-cell title="表单">
             <div slot="footer">
