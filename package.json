@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "gulp --gulpfile build/build-dev.js",
     "build": "gulp --gulpfile build/build-prod.js",
+    "project": "gulp --gulpfile build/build-project.js",
     "prepare": "npm run build",
     "create": "node build/genTemplate.js"
   },
