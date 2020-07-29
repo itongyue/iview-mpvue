@@ -1,8 +1,8 @@
 <template>
-  <div class="i-tabs-tab" v-bind:class="classObj" @click.stop="handleClickItem">
+  <div class="i-tabs-tab" v-bind:class="classObj" @click="handleClickItem">
     <div class="i-tabs-tab-content">
       <i-badge :dot="dot" :count="remindCount">
-        <div>
+        <div @click="handleClickItem">
           <div class="i-tabs-tab-title"
             v-bind:class="{'i-tabs-tab-title-current': current}"
             v-if="current"
