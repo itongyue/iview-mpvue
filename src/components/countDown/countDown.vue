@@ -1,6 +1,6 @@
 <template>
-  <div class="countdown-class">
-    {{time}}
+  <div class="countdown-class" v-bind:class="classObj">
+    {{prefix}}{{time}}
   </div>
 </template>
 <script>
@@ -29,6 +29,10 @@ export default {
     iClass: {
       type: String,
       default: ''
+    },
+    prefix: {
+      type: String,
+      default: ''
     }
   },
   data() {
@@ -41,13 +45,19 @@ export default {
   mounted() {
     this.getFormat()
   },
+  computed: {
+    classObj() {
+      return this.iClass
+    }
+  },
   methods: {
     getFormat() {
       const len = this.format.length
-      if (this.showDay && this.showDay !== 'false') {
-        this.resultFormat.push('')
-      }
+      // if (this.showDay && this.showDay !== 'false') {
+      //   this.resultFormat.push('')
+      // }
       if (len >= 3) {
+        this.changeFormat = true
         for (let i = 0; i < len; i++) {
           if (this.resultFormat.length >= 4) break
           if (this.format[i]) {
@@ -66,10 +76,13 @@ export default {
       const gapTime = Math.ceil((this.target - new Date().getTime()) / 1000)
       let result = ''
       let time = '00:00:00'
-      let day = '00'
+      let day = '0'
       const format = this.resultFormat
       if (gapTime > 0) {
-        day = this.formatNum(parseInt(gapTime / 86400))
+        day = parseInt(gapTime / 86400)
+        if (day === 0) {
+          this.showDay = false
+        }
         let lastTime = gapTime % 86400
         const hour = this.formatNum(parseInt(lastTime / 3600))
         lastTime = lastTime % 3600
@@ -90,7 +103,7 @@ export default {
       }
       if (this.showDay && this.showDay !== 'false') {
         if (this.changeFormat) {
-          result = `${day}${format[0]} ${time}`
+          result = `${day}${format[0]}${time}`
         }
         else {
           result = `${day}d ${time}`
