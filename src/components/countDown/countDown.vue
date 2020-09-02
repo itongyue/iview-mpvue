@@ -99,6 +99,16 @@ export default {
         }
       }
       else {
+        this.showDay = false
+        const hour = 0;
+        const minute = 0;
+        const second = 0;
+        if (this.changeFormat) {
+          time = `${hour}${format[1]}${minute}${format[2]}${second}${format[3]}`
+        }
+        else {
+          time = `${hour}:${minute}:${second}`
+        }
         this.endfn()
       }
       if (this.showDay && this.showDay !== 'false') {
