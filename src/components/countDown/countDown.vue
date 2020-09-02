@@ -10,6 +10,10 @@ export default {
       type: Number,
       default: 0
     },
+    countUp: {
+      type: Boolean,
+      default: false
+    },
     showDay: {
       type: Boolean,
       default: false
@@ -73,21 +77,24 @@ export default {
       }, 1000)
     },
     getLastTime() {
-      const gapTime = Math.ceil((this.target - new Date().getTime()) / 1000)
+      let gapTime = Math.ceil((this.target - new Date().getTime()) / 1000)
+      if (this.countUp) {
+        gapTime = 0 - gapTime
+      }
       let result = ''
       let time = '00:00:00'
       let day = '0'
-      const format = this.resultFormat
+      let format = this.resultFormat
       if (gapTime > 0) {
         day = parseInt(gapTime / 86400)
         if (day === 0) {
           this.showDay = false
         }
         let lastTime = gapTime % 86400
-        const hour = this.formatNum(parseInt(lastTime / 3600))
+        let hour = this.formatNum(parseInt(lastTime / 3600))
         lastTime = lastTime % 3600
-        const minute = this.formatNum(parseInt(lastTime / 60))
-        const second = this.formatNum(lastTime % 60)
+        let minute = this.formatNum(parseInt(lastTime / 60))
+        let second = this.formatNum(lastTime % 60)
         if (this.changeFormat) {
           time = `${hour}${format[1]}${minute}${format[2]}${second}${format[3]}`
         }
@@ -100,9 +107,9 @@ export default {
       }
       else {
         this.showDay = false
-        const hour = 0;
-        const minute = 0;
-        const second = 0;
+        let hour = 0;
+        let minute = 0;
+        let second = 0;
         if (this.changeFormat) {
           time = `${hour}${format[1]}${minute}${format[2]}${second}${format[3]}`
         }
