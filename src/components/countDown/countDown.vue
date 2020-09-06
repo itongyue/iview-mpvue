@@ -1,11 +1,13 @@
 <template>
-  <div class="countdown-class" v-bind:class="classObj">
-    {{prefix}}{{time}}
-  </div>
+  <div class="countdown-class" v-bind:class="classObj">{{ prefix }}{{ time }}</div>
 </template>
 <script>
 export default {
   props: {
+    restart: {
+      type: Boolean,
+      default: false
+    },
     target: {
       type: Number,
       default: 0
@@ -54,8 +56,34 @@ export default {
       return this.iClass
     }
   },
+  watch: {
+    target: {
+      deep: true,
+      immediate: true,
+      handler(newVal, oldVal) {
+        console.log('target:' + newVal)
+        if (newVal) {
+          this.getFormat()
+        }
+      }
+    },
+    restart: {
+      deep: true,
+      immediate: true,
+      handler(newVal, oldVal) {
+        console.log('restart:' + newVal)
+        if (newVal) {
+          this.getFormat()
+        }
+      }
+    }
+  },
   methods: {
     getFormat() {
+      this.time = ''
+      this.resultFormat = []
+      this.changeFormat = false
+
       const len = this.format.length
       // if (this.showDay && this.showDay !== 'false') {
       //   this.resultFormat.push('')
@@ -85,7 +113,7 @@ export default {
       let time = '00:00:00'
       let day = '0'
       let format = this.resultFormat
-      if (gapTime > 0) {
+      if (gapTime > 0 || this.countUp) {
         day = parseInt(gapTime / 86400)
         if (day === 0) {
           this.showDay = false
@@ -96,37 +124,44 @@ export default {
         let minute = this.formatNum(parseInt(lastTime / 60))
         let second = this.formatNum(lastTime % 60)
         if (this.changeFormat) {
-          time = `${hour}${format[1]}${minute}${format[2]}${second}${format[3]}`
-        }
-        else {
-          time = `${hour}:${minute}:${second}`
+          if (hour !== '00') {
+            time = `${hour}${format[1]}`
+          } else {
+            time = ''
+          }
+          time += `${minute}${format[2]}${second}${format[3]}`
+        } else {
+          if (hour !== '00') {
+            time = `${hour}:`
+          } else {
+            time = ''
+          }
+          time += `${minute}:${second}`
         }
         if (!this.clearTimer || this.clearTimer === 'false') {
           this.init()
         }
-      }
-      else {
+      } else {
         this.showDay = false
-        let hour = 0;
-        let minute = 0;
-        let second = 0;
+        let hour = '00'
+        let minute = '00'
+        let second = '00'
         if (this.changeFormat) {
-          time = `${hour}${format[1]}${minute}${format[2]}${second}${format[3]}`
+          time = `${minute}${format[2]}${second}${format[3]}`
+        } else {
+          time = `${minute}:${second}`
         }
-        else {
-          time = `${hour}:${minute}:${second}`
+        if (!this.countUp) {
+          this.endfn()
         }
-        this.endfn()
       }
       if (this.showDay && this.showDay !== 'false') {
         if (this.changeFormat) {
           result = `${day}${format[0]}${time}`
-        }
-        else {
+        } else {
           result = `${day}d ${time}`
         }
-      }
-      else {
+      } else {
         result = time
       }
       this.time = result
