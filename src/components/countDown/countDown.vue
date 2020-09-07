@@ -58,21 +58,21 @@ export default {
   },
   watch: {
     target: {
-      deep: true,
-      immediate: true,
+      deep: false,
+      immediate: false,
       handler(newVal, oldVal) {
         console.log('target:' + newVal)
-        if (newVal) {
+        if (newVal !== oldVal) {
           this.getFormat()
         }
       }
     },
     restart: {
-      deep: true,
-      immediate: true,
+      deep: false,
+      immediate: false,
       handler(newVal, oldVal) {
         console.log('restart:' + newVal)
-        if (newVal) {
+        if ((newVal !== oldVal) && newVal) {
           this.getFormat()
         }
       }
