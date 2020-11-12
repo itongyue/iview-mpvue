@@ -10,7 +10,7 @@ const destDir = getProjectPath('dist')
 const babel = require("gulp-babel")
 process.env.PROJECT = process.argv[process.argv.length - 1]
 if ('build/build-project.js' === process.env.PROJECT || process.env.PROJECT.substr(0,2) !== '--') {
-    throw new Error('请指定projectName. e.g.: npm run porject -- --projectName');
+    throw new Error('请指定projectName. e.g.: npm run project -- --projectName');
 }
 process.env.PROJECT = process.env.PROJECT.substr(2)
 const projectDestDir = getProjectPath(`../../${process.env.PROJECT}/src/components/iview`)
