@@ -8,7 +8,12 @@ const gulp = require('gulp')
 const rename = require('gulp-rename')
 const destDir = getProjectPath('dist')
 const babel = require("gulp-babel")
-const projectDestDir = getProjectPath('../src/components/iview')
+process.env.PROJECT = process.argv[process.argv.length - 1]
+if ('build/build-project.js' === process.env.PROJECT || process.env.PROJECT.substr(0,2) !== '--') {
+    throw new Error('请指定projectName. e.g.: npm run porject -- --projectName');
+}
+process.env.PROJECT = process.env.PROJECT.substr(2)
+const projectDestDir = getProjectPath(`../${process.env.PROJECT}/src/components/iview`)
 
 gulp.task('compile-css', done => {
   return gulp
@@ -92,4 +97,6 @@ gulp.task('auto', () => {
   gulp.watch('../src/**/*.less', gulp.series('compile-css'))
 })
 
-gulp.task('default', gulp.series('compile-css', 'compile-js', 'copy-vue','copy-static', 'auto'))
+gulp.task('dev', gulp.series('compile-css', 'compile-js', 'copy-vue','copy-static', 'auto'))
+
+gulp.task('default', gulp.series('compile-css', 'compile-js', 'copy-vue','copy-static'))
